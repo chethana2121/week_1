@@ -11,11 +11,14 @@ int main(){
     printf("enter the element to be found:");
     scanf("%d",&ele);
     pos = linearsearch(a,n,ele,0);
-    if(pos == -1){
-        printf("element found at %d position",pos+1);
+    if(pos != -1){
+        printf("\nelement found at %d position",pos+1);
+       else{
+       printf("\nelement not found");
+       }
     }
     }
-int linearsearch(int a[10],int n,int ele,int pos){
+int linearsearch(int a[],int n,int ele,int pos){
         if(pos == -1)
                 return 0;
         else if(a[pos]==ele){
@@ -24,6 +27,5 @@ int linearsearch(int a[10],int n,int ele,int pos){
         else{
         return linearsearch(a,n,ele,pos+1);
         }
-return -1;
 
 }
